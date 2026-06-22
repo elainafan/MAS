@@ -1,0 +1,39 @@
+# IPPO pixel configuration for Quadrapong (~10-12 day training on GPU)
+algo: "ippo"
+env:
+  obs_type: "grayscale_image"
+  max_cycles: 100000
+  frame_stack: 3
+  resize_dim: 84
+
+model:
+  cnn_hidden: 512
+  use_rnn: false
+  rnn_hidden: 128
+
+training:
+  seed: 42
+  total_steps: 10_000_000
+  rollout_steps: 2048
+  lr: 3.0e-4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_param: 0.2
+  entropy_coef: 0.01
+  value_coef: 0.5
+  max_grad_norm: 0.5
+  ppo_epochs: 10
+  mini_batch_size: 64
+  team: 1
+
+eval:
+  eval_interval: 50000
+  num_eval_episodes: 20
+
+logging:
+  log_interval: 5000
+  save_interval: 200000
+  checkpoint_dir: "checkpoints/ippo_pixel"
+  log_dir: "logs/tensorboard/ippo_pixel"
+  use_wandb: false
+  wandb_project: "quadrapong"

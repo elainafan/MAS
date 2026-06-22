@@ -1,0 +1,283 @@
+Unified Head-to-Head Results
+Episodes: 5
+
+IPPO(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 28.0±0.0 [28,28] vs -28.0±0.0 [-28,-28], Ep_len: 18772
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+MAPPO(T1) vs IPPO(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -24.0±0.0 [-24,-24] vs 18.0±0.0 [18,18], Ep_len: 15011
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+IPPO(T1) vs QMIX(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 24.0±0.0 [24,24] vs -24.0±0.0 [-24,-24], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+QMIX(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 32.0±0.0 [32,32] vs -34.0±0.0 [-34,-34], Ep_len: 11978
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+IPPO(T1) vs IPPO(T2):
+  WR: 1.000 vs 1.000, Draw: 0.000
+  Score: 4.0±0.0 [4,4] vs -312.0±0.0 [-312,-312], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs IPPO(T2):
+  WR: 1.000 vs 1.000, Draw: 0.000
+  Score: -314.0±0.0 [-314,-314] vs 2.0±0.0 [2,2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -322.0±0.0 [-322,-322], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs IPPO(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -312.0±0.0 [-312,-312] vs 4.0±0.0 [4,4], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs IPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -4.0±0.0 [-4,-4] vs 2.0±0.0 [2,2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO_POOL(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 4.0±0.0 [4,4] vs -4.0±0.0 [-4,-4], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs MAPPO_POOL(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 12.0±0.0 [12,12] vs -12.0±0.0 [-12,-12], Ep_len: 11852
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+MAPPO_POOL(T1) vs IPPO(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -6.0±0.0 [-6,-6] vs 6.0±0.0 [6,6], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs RANDOM(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 16.4±7.6 [8,26] vs -16.4±7.6 [-26,-8], Ep_len: 14005
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+RANDOM(T1) vs IPPO(T2):
+  WR: 0.800 vs 0.200, Draw: 0.000
+  Score: 9.6±8.3 [-2,24] vs -9.6±8.3 [-24,2], Ep_len: 13523
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+MAPPO(T1) vs QMIX(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -42.0±0.0 [-42,-42] vs 42.0±0.0 [42,42], Ep_len: 10860
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+QMIX(T1) vs MAPPO(T2):
+  WR: 0.000 vs 0.000, Draw: 1.000
+  Score: 0.0±0.0 [0,0] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=0 trunc(tie)=5
+
+MAPPO(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -302.0±0.0 [-302,-302], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs MAPPO(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -310.0±0.0 [-310,-310] vs -2.0±0.0 [-2,-2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs MAPPO(T2):
+  WR: 1.000 vs 1.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -326.0±0.0 [-326,-326], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs MAPPO(T2):
+  WR: 1.000 vs 1.000, Draw: 0.000
+  Score: -324.0±0.0 [-324,-324] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs IPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -36.0±0.0 [-36,-36] vs 34.0±0.0 [34,34], Ep_len: 12955
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+IPPO_POOL(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 26.0±0.0 [26,26] vs -30.0±0.0 [-30,-30], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs MAPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -30.0±0.0 [-30,-30] vs 22.0±0.0 [22,22], Ep_len: 17920
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+MAPPO_POOL(T1) vs MAPPO(T2):
+  WR: 0.000 vs 0.000, Draw: 1.000
+  Score: 0.0±0.0 [0,0] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=0 trunc(tie)=5
+
+MAPPO(T1) vs RANDOM(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -28.4±3.9 [-34,-22] vs 28.4±3.9 [22,34], Ep_len: 16183
+  End: natural=4 trunc(lead)=1 trunc(tie)=0
+
+RANDOM(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 25.2±8.6 [10,34] vs -25.2±8.6 [-34,-10], Ep_len: 16610
+  End: natural=4 trunc(lead)=1 trunc(tie)=0
+
+QMIX(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -308.0±0.0 [-308,-308], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs QMIX(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -310.0±0.0 [-310,-310] vs -2.0±0.0 [-2,-2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+QMIX(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -326.0±0.0 [-326,-326], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs QMIX(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -324.0±0.0 [-324,-324] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+QMIX(T1) vs IPPO_POOL(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 28.0±0.0 [28,28] vs -28.0±0.0 [-28,-28], Ep_len: 11011
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+IPPO_POOL(T1) vs QMIX(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 8.0±0.0 [8,8] vs -8.0±0.0 [-8,-8], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+QMIX(T1) vs MAPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -14.0±0.0 [-14,-14] vs 12.0±0.0 [12,12], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO_POOL(T1) vs QMIX(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -2.0±0.0 [-2,-2] vs 2.0±0.0 [2,2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+QMIX(T1) vs RANDOM(T2):
+  WR: 0.400 vs 0.600, Draw: 0.000
+  Score: 5.2±12.2 [-6,26] vs -5.2±12.2 [-26,6], Ep_len: 18952
+  End: natural=1 trunc(lead)=4 trunc(tie)=0
+
+RANDOM(T1) vs QMIX(T2):
+  WR: 0.600 vs 0.000, Draw: 0.400
+  Score: 10.0±8.6 [0,20] vs -10.0±8.6 [-20,0], Ep_len: 19238
+  End: natural=1 trunc(lead)=2 trunc(tie)=2
+
+IPPO(T1) vs MAPPO(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -326.0±0.0 [-326,-326] vs -2.0±0.0 [-2,-2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs IPPO(T2):
+  WR: 0.000 vs 0.000, Draw: 1.000
+  Score: 0.0±0.0 [0,0] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=0 trunc(tie)=5
+
+IPPO(T1) vs IPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -310.0±0.0 [-310,-310] vs -2.0±0.0 [-2,-2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO_POOL(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: -2.0±0.0 [-2,-2] vs -298.0±0.0 [-298,-298], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs MAPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -42.0±0.0 [-42,-42] vs 42.0±0.0 [42,42], Ep_len: 12246
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+MAPPO_POOL(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 14.0±0.0 [14,14] vs -14.0±0.0 [-14,-14], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO(T1) vs RANDOM(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -312.4±7.9 [-322,-300] vs -0.4±2.3 [-2,4], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+RANDOM(T1) vs IPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 9.6±10.2 [-2,28] vs -281.2±29.7 [-320,-228], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs IPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -324.0±0.0 [-324,-324] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO_POOL(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -324.0±0.0 [-324,-324], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs MAPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -322.0±0.0 [-322,-322] vs 0.0±0.0 [0,0], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO_POOL(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -326.0±0.0 [-326,-326], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO(T1) vs RANDOM(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -321.6±3.2 [-324,-316] vs 0.4±0.8 [0,2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+RANDOM(T1) vs MAPPO(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 0.0±0.0 [0,0] vs -323.6±4.8 [-326,-314], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+IPPO_POOL(T1) vs MAPPO_POOL(T2):
+  WR: 0.000 vs 1.000, Draw: 0.000
+  Score: -2.0±0.0 [-2,-2] vs 2.0±0.0 [2,2], Ep_len: 20000
+  End: natural=0 trunc(lead)=5 trunc(tie)=0
+
+MAPPO_POOL(T1) vs IPPO_POOL(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 20.0±0.0 [20,20] vs -28.0±0.0 [-28,-28], Ep_len: 13440
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+IPPO_POOL(T1) vs RANDOM(T2):
+  WR: 1.000 vs 0.000, Draw: 0.000
+  Score: 15.6±5.3 [10,22] vs -16.0±5.1 [-22,-10], Ep_len: 16580
+  End: natural=4 trunc(lead)=1 trunc(tie)=0
+
+RANDOM(T1) vs IPPO_POOL(T2):
+  WR: 0.800 vs 0.200, Draw: 0.000
+  Score: 7.2±9.8 [-10,20] vs -7.2±9.8 [-20,10], Ep_len: 15688
+  End: natural=5 trunc(lead)=0 trunc(tie)=0
+
+MAPPO_POOL(T1) vs RANDOM(T2):
+  WR: 0.800 vs 0.000, Draw: 0.200
+  Score: 7.6±5.6 [0,14] vs -7.6±5.6 [-14,0], Ep_len: 18649
+  End: natural=2 trunc(lead)=2 trunc(tie)=1
+
+RANDOM(T1) vs MAPPO_POOL(T2):
+  WR: 0.600 vs 0.400, Draw: 0.000
+  Score: 2.4±6.4 [-8,8] vs -2.4±6.4 [-8,8], Ep_len: 19186
+  End: natural=4 trunc(lead)=1 trunc(tie)=0
+

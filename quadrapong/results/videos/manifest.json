@@ -1,0 +1,58 @@
+[
+  {
+    "video": "results/videos/ippo_pool_vs_ippo.mp4",
+    "team1": "IPPO_POOL",
+    "team2": "IPPO",
+    "caption": "Opponent-pool self-play breaks the standard IPPO side lock-in.",
+    "seed": 7,
+    "steps": 20000,
+    "team1_score": 4.0,
+    "team2_score": -4.0,
+    "winner": "IPPO_POOL",
+    "frames": 2501,
+    "fps": 30,
+    "frame_stride": 8
+  },
+  {
+    "video": "results/videos/ippo_vs_random.mp4",
+    "team1": "IPPO",
+    "team2": "RANDOM",
+    "caption": "Baseline IPPO policy against a random opponent.",
+    "seed": 7,
+    "steps": 12350,
+    "team1_score": 26.0,
+    "team2_score": -26.0,
+    "winner": "IPPO",
+    "frames": 1545,
+    "fps": 30,
+    "frame_stride": 8
+  },
+  {
+    "video": "results/videos/mappo_vs_qmix.mp4",
+    "team1": "MAPPO",
+    "team2": "QMIX",
+    "caption": "QMIX is dominant when placed on Team 2 against MAPPO.",
+    "seed": 7,
+    "steps": 10860,
+    "team1_score": -42.0,
+    "team2_score": 42.0,
+    "winner": "QMIX",
+    "frames": 1359,
+    "fps": 30,
+    "frame_stride": 8
+  },
+  {
+    "video": "results/videos/random_vs_mappo.mp4",
+    "team1": "RANDOM",
+    "team2": "MAPPO",
+    "caption": "Random Team 1 exposes MAPPO collapse in the evaluated checkpoint.",
+    "seed": 7,
+    "steps": 20000,
+    "team1_score": 16.0,
+    "team2_score": -16.0,
+    "winner": "RANDOM",
+    "frames": 2501,
+    "fps": 30,
+    "frame_stride": 8
+  }
+]

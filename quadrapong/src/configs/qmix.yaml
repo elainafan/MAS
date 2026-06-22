@@ -1,0 +1,42 @@
+# QMIX configuration for Quadrapong
+algo: "qmix"
+env:
+  obs_type: "ram"
+  max_cycles: 100000
+  frame_stack: 1
+
+model:
+  rnn_hidden: 64
+  q_hidden: [128]
+  mixing_embed: 32
+  hyper_hidden: 64
+
+training:
+  seed: 42
+  total_steps: 1_000_000
+  lr: 5.0e-4
+  gamma: 0.97
+  batch_size: 256
+  buffer_capacity: 100000
+  target_update_interval: 200
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay: 300000
+  grad_norm_clip: 10.0
+  double_q: true
+  team: 1
+
+eval:
+  eval_interval: 5000
+  num_eval_episodes: 20
+
+logging:
+  log_interval: 500
+  save_interval: 25000
+  checkpoint_dir: "checkpoints/qmix"
+  log_dir: "logs/tensorboard/qmix"
+  use_wandb: false
+  wandb_project: "quadrapong"
+
+opponent:
+  type: "random"

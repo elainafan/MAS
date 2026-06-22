@@ -1,0 +1,46 @@
+# MAPPO with Opponent Pool self-play configuration
+algo: "mappo_pool"
+env:
+  obs_type: "ram"
+  max_cycles: 100000
+  frame_stack: 1
+
+model:
+  actor_hidden: [128, 128]
+  critic_hidden: [128, 128]
+  use_rnn: false
+  rnn_hidden: 128
+
+training:
+  seed: 42
+  total_steps: 10_000_000
+  rollout_steps: 2048
+  lr: 3.0e-4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_param: 0.2
+  entropy_coef: 0.01
+  value_coef: 0.5
+  max_grad_norm: 0.5
+  ppo_epochs: 10
+  mini_batch_size: 64
+  use_popart: false
+
+eval:
+  eval_interval: 50000
+  num_eval_episodes: 20
+
+logging:
+  log_interval: 5000
+  save_interval: 200000
+  checkpoint_dir: "checkpoints/mappo_pool"
+  log_dir: "logs/tensorboard/mappo_pool"
+  use_wandb: false
+  wandb_project: "quadrapong"
+
+pool:
+  capacity: 5
+  save_interval: 200000
+  history_weight: 0.6
+  random_weight: 0.2
+  current_weight: 0.2
