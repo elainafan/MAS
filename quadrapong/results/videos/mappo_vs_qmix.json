@@ -2,7 +2,7 @@
   "video": "results/videos/mappo_vs_qmix.mp4",
   "team1": "MAPPO",
   "team2": "QMIX",
-  "caption": "QMIX is dominant when placed on Team 2 against MAPPO.",
+  "caption": "QMIX dominates as Team 2",
   "seed": 7,
   "steps": 10860,
   "team1_score": -42.0,

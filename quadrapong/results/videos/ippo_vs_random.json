@@ -2,7 +2,7 @@
   "video": "results/videos/ippo_vs_random.mp4",
   "team1": "IPPO",
   "team2": "RANDOM",
-  "caption": "Baseline IPPO policy against a random opponent.",
+  "caption": "IPPO baseline vs random",
   "seed": 7,
   "steps": 12350,
   "team1_score": 26.0,

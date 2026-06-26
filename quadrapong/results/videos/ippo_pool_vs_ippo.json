@@ -2,7 +2,7 @@
   "video": "results/videos/ippo_pool_vs_ippo.mp4",
   "team1": "IPPO_POOL",
   "team2": "IPPO",
-  "caption": "Opponent-pool self-play breaks the standard IPPO side lock-in.",
+  "caption": "Opponent pool beats IPPO",
   "seed": 7,
   "steps": 20000,
   "team1_score": 4.0,

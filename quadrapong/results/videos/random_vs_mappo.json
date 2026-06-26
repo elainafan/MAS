@@ -2,7 +2,7 @@
   "video": "results/videos/random_vs_mappo.mp4",
   "team1": "RANDOM",
   "team2": "MAPPO",
-  "caption": "Random Team 1 exposes MAPPO collapse in the evaluated checkpoint.",
+  "caption": "Random exposes MAPPO collapse",
   "seed": 7,
   "steps": 20000,
   "team1_score": 16.0,
