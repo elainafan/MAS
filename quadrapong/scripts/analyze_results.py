@@ -248,6 +248,7 @@ def write_summary_md(matchups, rows, models, summary, episodes, source_path, out
     lines.append(f"- 全局 T1 平均胜率：{pct(directed_t1_wr)}；T2 平均胜率：{pct(directed_t2_wr)}；平局率：{pct(directed_draw)}。")
     lines.append(f"- 终止类型：natural={natural} ({pct(natural / total)}), trunc_lead={trunc_lead} ({pct(trunc_lead / total)}), trunc_tie={trunc_tie} ({pct(trunc_tie / total)})。")
     lines.append(f"- 确定性对局：{deterministic}/{len(rows)} 个有向 matchup 的所有 episodes 终局分数完全一致。")
+    lines.append("- T1/T2 应视为有向角色而非可互换阵营；训练中会形成不同角色策略，当前观察是 Team 2 更偏防守/守成。")
     lines.append("")
     lines.append("## 模型综合排名")
     lines.append("")

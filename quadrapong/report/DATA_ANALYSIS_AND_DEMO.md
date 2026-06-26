@@ -42,7 +42,7 @@ python scripts/analyze_results.py results/unified_all_5ep_v2_traj.npz \
 ## 报告中建议强调的结论
 
 1. 对手池自博弈是最清晰的创新点证据：`IPPO_POOL` 双向压制 `IPPO`，`MAPPO_POOL` 相对 `MAPPO` 提升更明显。
-2. Quadrapong 的初始位置效应非常强，T1/T2 位置差异经常压过算法差异；分析时要把“算法强弱”和“side assignment”分开讨论。
+2. Quadrapong 的初始位置效应非常强，T1/T2 位置差异经常压过算法差异；分析时要把“算法强弱”和“side assignment”分开讨论。T1/T2 训练出的策略并非镜像换边，当前定性观察是 Team 2 更偏防守/守成。
 3. 标准 `MAPPO` checkpoint 出现明显 collapse：对随机策略也经常失利，可作为自博弈不稳定性的反例。
 4. `QMIX` 在该环境中呈现强烈位置不对称和稀疏奖励困难，适合作为负结果讨论，而不是回避。
 5. pixel 模型失败的原因应诚实写成 limitation：像素观测增大样本复杂度，QMIX pixel 的 replay buffer 成本尤其高。
@@ -59,13 +59,13 @@ cd /workspace/MAS/quadrapong
 python scripts/record_demo.py --preset all --device cuda:0
 ```
 
-默认输出到 `results/videos/`，每个 `.mp4` 旁边会生成同名 `.json`，记录 seed、步数、终局比分和 winner。
+默认输出到 `results/videos/`，每个 `.mp4` 旁边会生成同名 `.json`，记录 seed、步数、终局 return 和 winner。
 
 预设视频：
 
 - `ippo_vs_random.mp4`：展示基础 IPPO 已经学到有效策略。
 - `ippo_pool_vs_ippo.mp4`：展示 opponent pool 的创新点效果。
-- `mappo_vs_qmix.mp4`：展示 QMIX 作为 T2 对 MAPPO 的统治性结果。
+- `mappo_vs_qmix.mp4`：展示 QMIX 作为 T2 在防守/反击角色下对 MAPPO 的优势。
 - `random_vs_mappo.mp4`：展示标准 MAPPO checkpoint 的 collapse。
 
 单独录制示例：

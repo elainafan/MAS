@@ -35,13 +35,15 @@ MAPPO_POOL 相对标准 MAPPO 也有明显改善。尤其当 MAPPO_POOL 作为 T
 
 因此我们采用双向评估：每一对模型都交换 T1/T2 位置各评估 50 局。报告中的对抗矩阵每格写作 `A 做 T1 胜率 / A 做 T2 胜率`，避免单方向结果误导。
 
+同时，T1/T2 训练出的策略不能简单理解为同一策略的镜像换边。根据训练观察，Team 2 更偏防守/守成，因此同一算法在 T1 与 T2 的表现差异既包含 spawn/发球机制影响，也包含训练过程中形成的角色化策略。
+
 ### 3.3 MAPPO 出现 collapse
 
 标准 MAPPO checkpoint 表现最弱。MAPPO(T1) vs RANDOM(T2) 胜率仅 2%，RANDOM(T1) vs MAPPO(T2) 胜率达到 94%。这可以作为多智能体自博弈训练不稳定的负例：集中式 critic 并不必然带来更强策略，若训练动态 collapse，最终策略甚至会弱于随机 baseline。
 
 ### 3.4 QMIX 呈现强烈位置不对称
 
-QMIX 的表现高度依赖位置。MAPPO(T1) vs QMIX(T2) 中，QMIX 以 100% 胜率和 +42:-42 的分数优势获胜；但 QMIX(T1) vs MAPPO(T2) 时胜率为 0%，平局率为 100%。这说明 QMIX 学到的策略可能更适配某个固定位置/发球模式，而不是均衡的双边策略。
+QMIX 的表现高度依赖位置。MAPPO(T1) vs QMIX(T2) 中，QMIX 以 100% 胜率和 +42:-42 的 return 优势获胜；但 QMIX(T1) vs MAPPO(T2) 时胜率为 0%，平局率为 100%。这说明 QMIX 学到的策略可能更适配某个固定位置/发球模式和 T2 防守/守成角色，而不是均衡的双边策略。
 
 ### 3.5 Pixel 与 QMIX 负结果需要诚实讨论
 
@@ -53,7 +55,7 @@ Pixel 模型整体没有形成有效策略，QMIX pixel 训练也因为 replay b
 |---|---|---|
 | `ippo_vs_random.mp4` | 展示基础 IPPO 已学到有效策略 | IPPO 胜，+26:-26，12350 步 |
 | `ippo_pool_vs_ippo.mp4` | 展示 opponent pool 创新点 | IPPO_POOL 胜，+4:-4，20000 步 |
-| `mappo_vs_qmix.mp4` | 展示 QMIX 作为 T2 的统治性对局 | QMIX 胜，-42:+42，10860 步 |
+| `mappo_vs_qmix.mp4` | 展示 QMIX 作为 T2 的防守/反击优势 | QMIX 胜，-42:+42，10860 步 |
 | `random_vs_mappo.mp4` | 展示标准 MAPPO collapse | RANDOM 胜，+16:-16，20000 步 |
 
 录屏文件已经在 `quadrapong/results/videos/` 下，每个 mp4 旁边都有同名 JSON 元数据。
