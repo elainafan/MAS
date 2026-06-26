@@ -39,22 +39,22 @@ PRESETS = {
     "ippo_vs_random": {
         "team1": "checkpoints/ippo/ippo_final.pt",
         "team2": "random",
-        "caption": "Baseline IPPO policy against a random opponent.",
+        "caption": "IPPO baseline vs random",
     },
     "ippo_pool_vs_ippo": {
         "team1": "checkpoints/ippo_pool/ippo_pool_final.pt",
         "team2": "checkpoints/ippo/ippo_final.pt",
-        "caption": "Opponent-pool self-play breaks the standard IPPO side lock-in.",
+        "caption": "Opponent pool beats IPPO",
     },
     "mappo_vs_qmix": {
         "team1": "checkpoints/mappo/mappo_final.pt",
         "team2": "checkpoints/qmix/qmix_final.pt",
-        "caption": "QMIX is dominant when placed on Team 2 against MAPPO.",
+        "caption": "QMIX dominates as Team 2",
     },
     "random_vs_mappo": {
         "team1": "random",
         "team2": "checkpoints/mappo/mappo_final.pt",
-        "caption": "Random Team 1 exposes MAPPO collapse in the evaluated checkpoint.",
+        "caption": "Random exposes MAPPO collapse",
     },
 }
 
@@ -78,32 +78,52 @@ def team_score(rewards):
 
 
 def overlay(frame, step, t1_name, t2_name, t1_score, t2_score, caption):
-    img = np.ascontiguousarray(frame.copy())
+    scale = 3
+    top_h = 86
+    frame = np.ascontiguousarray(frame.copy())
+    img = cv2.resize(
+        frame,
+        (frame.shape[1] * scale, frame.shape[0] * scale),
+        interpolation=cv2.INTER_NEAREST,
+    )
     h, w = img.shape[:2]
-    panel_h = 54 if caption else 38
-    cv2.rectangle(img, (0, 0), (w, panel_h), (0, 0, 0), thickness=-1)
+    canvas = np.zeros((h + top_h, w, 3), dtype=img.dtype)
+    canvas[top_h:, :] = img
+
+    title = f"{t1_name} (T1) vs {t2_name} (T2)"
+    score = f"score {t1_score:+.0f}:{t2_score:+.0f}    step {step}"
     cv2.putText(
-        img,
-        f"{t1_name} (T1)  {t1_score:+.0f}  vs  {t2_score:+.0f}  {t2_name} (T2)   step {step}",
-        (8, 22),
+        canvas,
+        title,
+        (12, 26),
         cv2.FONT_HERSHEY_SIMPLEX,
-        0.45,
+        0.62,
         (255, 255, 255),
+        2,
+        cv2.LINE_AA,
+    )
+    cv2.putText(
+        canvas,
+        score,
+        (12, 52),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        0.50,
+        (235, 235, 235),
         1,
         cv2.LINE_AA,
     )
     if caption:
         cv2.putText(
-            img,
-            caption[:110],
-            (8, 43),
+            canvas,
+            caption[:64],
+            (12, 75),
             cv2.FONT_HERSHEY_SIMPLEX,
-            0.34,
-            (220, 220, 220),
+            0.44,
+            (180, 220, 255),
             1,
             cv2.LINE_AA,
         )
-    return img
+    return canvas
 
 
 def open_writer(path, fps):
