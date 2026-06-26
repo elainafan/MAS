@@ -91,7 +91,7 @@ def overlay(frame, step, t1_name, t2_name, t1_score, t2_score, caption):
     canvas[top_h:, :] = img
 
     title = f"{t1_name} (T1) vs {t2_name} (T2)"
-    score = f"score {t1_score:+.0f}:{t2_score:+.0f}    step {step}"
+    returns = f"return {t1_score:+.0f}:{t2_score:+.0f}    step {step}"
     cv2.putText(
         canvas,
         title,
@@ -104,7 +104,7 @@ def overlay(frame, step, t1_name, t2_name, t1_score, t2_score, caption):
     )
     cv2.putText(
         canvas,
-        score,
+        returns,
         (12, 52),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.50,
